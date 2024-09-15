@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -127,4 +128,21 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL ='logout'
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# use the SMTP backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# Email settings for Gmail
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'blutusyo@gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+# Default from email adress
+DEFAULT_FROM_EMAIL = 'blutusyo@gmail.com' 
+
+# Initialize environment variables
+env = environ.Env()
+environ.Env.read_env()
+
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')

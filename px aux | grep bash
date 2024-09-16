@@ -1,0 +1,60 @@
+[1mdiff --git a/account/__pycache__/__init__.cpython-38.pyc b/account/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 8e2d28b..8270def 100644[m
+Binary files a/account/__pycache__/__init__.cpython-38.pyc and b/account/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/account/__pycache__/admin.cpython-38.pyc b/account/__pycache__/admin.cpython-38.pyc[m
+[1mindex b7d6474..4db1530 100644[m
+Binary files a/account/__pycache__/admin.cpython-38.pyc and b/account/__pycache__/admin.cpython-38.pyc differ
+[1mdiff --git a/account/__pycache__/apps.cpython-38.pyc b/account/__pycache__/apps.cpython-38.pyc[m
+[1mindex 41a6546..2b2bb99 100644[m
+Binary files a/account/__pycache__/apps.cpython-38.pyc and b/account/__pycache__/apps.cpython-38.pyc differ
+[1mdiff --git a/account/__pycache__/forms.cpython-38.pyc b/account/__pycache__/forms.cpython-38.pyc[m
+[1mindex be6435e..576f969 100644[m
+Binary files a/account/__pycache__/forms.cpython-38.pyc and b/account/__pycache__/forms.cpython-38.pyc differ
+[1mdiff --git a/account/__pycache__/models.cpython-38.pyc b/account/__pycache__/models.cpython-38.pyc[m
+[1mindex 6f059ad..b11ee49 100644[m
+Binary files a/account/__pycache__/models.cpython-38.pyc and b/account/__pycache__/models.cpython-38.pyc differ
+[1mdiff --git a/account/__pycache__/urls.cpython-38.pyc b/account/__pycache__/urls.cpython-38.pyc[m
+[1mindex 3bce10d..269d719 100644[m
+Binary files a/account/__pycache__/urls.cpython-38.pyc and b/account/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/account/__pycache__/views.cpython-38.pyc b/account/__pycache__/views.cpython-38.pyc[m
+[1mindex 4def529..d155db0 100644[m
+Binary files a/account/__pycache__/views.cpython-38.pyc and b/account/__pycache__/views.cpython-38.pyc differ
+[1mdiff --git a/account/migrations/__pycache__/__init__.cpython-38.pyc b/account/migrations/__pycache__/__init__.cpython-38.pyc[m
+[1mindex fb1d7db..4589967 100644[m
+Binary files a/account/migrations/__pycache__/__init__.cpython-38.pyc and b/account/migrations/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/bookmarks_project/__pycache__/__init__.cpython-38.pyc b/bookmarks_project/__pycache__/__init__.cpython-38.pyc[m
+[1mindex 9581a49..7cf1fc4 100644[m
+Binary files a/bookmarks_project/__pycache__/__init__.cpython-38.pyc and b/bookmarks_project/__pycache__/__init__.cpython-38.pyc differ
+[1mdiff --git a/bookmarks_project/__pycache__/settings.cpython-38.pyc b/bookmarks_project/__pycache__/settings.cpython-38.pyc[m
+[1mindex 030a4c2..74925b1 100644[m
+Binary files a/bookmarks_project/__pycache__/settings.cpython-38.pyc and b/bookmarks_project/__pycache__/settings.cpython-38.pyc differ
+[1mdiff --git a/bookmarks_project/__pycache__/urls.cpython-38.pyc b/bookmarks_project/__pycache__/urls.cpython-38.pyc[m
+[1mindex 05ddae5..f51bc52 100644[m
+Binary files a/bookmarks_project/__pycache__/urls.cpython-38.pyc and b/bookmarks_project/__pycache__/urls.cpython-38.pyc differ
+[1mdiff --git a/bookmarks_project/settings.py b/bookmarks_project/settings.py[m
+[1mindex 9f10cdc..61eba0c 100644[m
+[1m--- a/bookmarks_project/settings.py[m
+[1m+++ b/bookmarks_project/settings.py[m
+[36m@@ -23,9 +23,9 @@[m [mBASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))[m
+ SECRET_KEY = '$6l)ipyid5(2c@lud10&x3&6e^3==97ru8--ty*^6gkm(4pvm1'[m
+ [m
+ # SECURITY WARNING: don't run with debug turned on in production![m
+[31m-DEBUG = True[m
+[32m+[m[32mDEBUG = False[m
+ [m
+[31m-ALLOWED_HOSTS = [][m
+[32m+[m[32mALLOWED_HOSTS = ['polepole2.pythonanywhere.com'][m
+ [m
+ [m
+ # Application definition[m
+[36m@@ -122,6 +122,7 @@[m [mUSE_TZ = True[m
+ # https://docs.djangoproject.com/en/3.0/howto/static-files/[m
+ [m
+ STATIC_URL = '/static/'[m
+[32m+[m[32mSTATIC_ROOT = '/home/polepole2/social/static/'[m
+ [m
+ LOGIN_REDIRECT_URL = 'dashboard'[m
+ LOGIN_URL = 'login'[m
+[1mdiff --git a/db.sqlite3 b/db.sqlite3[m
+[1mindex c482771..af83309 100644[m
+Binary files a/db.sqlite3 and b/db.sqlite3 differ

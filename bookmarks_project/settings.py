@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -138,12 +137,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'blutusyo@gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = 'dhotxxkiaqiajixr '
 
 # Default from email adress
-DEFAULT_FROM_EMAIL = 'blutusyo@gmail.com' 
-
-# Initialize environment variables
-env = environ.Env()
-environ.Env.read_env()
-
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = 'blutusyo@gmail.com'

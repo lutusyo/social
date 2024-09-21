@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$6l)ipyid5(2c@lud10&x3&6e^3==97ru8--ty*^6gkm(4pvm1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['polepole2.pythonanywhere.com']
+ALLOWED_HOSTS = ['bongotz.com', 'www.bongotz.com']
 
 
 # Application definition
@@ -141,3 +141,9 @@ EMAIL_HOST_PASSWORD = 'dhotxxkiaqiajixr '
 
 # Default from email adress
 DEFAULT_FROM_EMAIL = 'blutusyo@gmail.com'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

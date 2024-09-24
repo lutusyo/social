@@ -23,10 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$6l)ipyid5(2c@lud10&x3&6e^3==97ru8--ty*^6gkm(4pvm1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+#DEBUG = False
+DEBUG = True
 
-
-ALLOWED_HOSTS = ['www.bongotz.com', 'bongotz.com']
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['www.bongotz.com', 'bongotz.com']
 
 
 # Application definition

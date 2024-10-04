@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <title>{% block title %}{% endblock %}</title>
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link  rel="stylesheet" href="{% static 'css/base.css' %}" >
     </head>
     <body>
@@ -25,8 +25,13 @@
 
             <span class="user">
                 {% if request.user.is_authenticated %}
-                    Hello {{ request.user.first_name }},
-                    <a href="{% url 'logout' %}">Log-out</a>
+                    Hello {{ request.user.first_name }}
+
+                        <form action="{% url 'logout' %}" method="POST">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+
                 {% else %}
                     <a href="{% url 'login' %}">Log-in</a>
                 {% endif %}

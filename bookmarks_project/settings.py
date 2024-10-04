@@ -26,8 +26,8 @@ SECRET_KEY = '$6l)ipyid5(2c@lud10&x3&6e^3==97ru8--ty*^6gkm(4pvm1'
 #DEBUG = False
 DEBUG = True
 
-ALLOWED_HOSTS = []
-#ALLOWED_HOSTS = ['www.bongotz.com', 'bongotz.com']
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.bongotz.com', 'bongotz.com']
 
 
 # Application definition
@@ -128,7 +128,7 @@ STATIC_ROOT = '/home/polepole2/social/static/'
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
-LOGOUT_URL ='logout'
+LOGOUT_URL = 'logout'
 
 
 # use the SMTP backend
@@ -148,4 +148,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+]
 

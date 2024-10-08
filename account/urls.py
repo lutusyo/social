@@ -13,6 +13,9 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('', views.dashboard, name = 'dashboard'),
     path('edit/', views.edit, name = 'edit'),
+    path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
+    path('terms-of-service/', views.terms_of_service, name='terms_of_service'),
+     path('delete-account/', views.delete_account, name='delete-account'),
 
     #path('password_change/',
     #     auth_views.PasswordChangeView.as_view(

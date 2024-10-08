@@ -69,7 +69,7 @@ def edit(request):
             profile_form.save()
             messages.success(request, 'Profile update '\
                                         'successfuly')
-            
+
         else:
             messages.error(request, 'Error updating your profile')
 
@@ -83,7 +83,15 @@ def edit(request):
                     'profile_form': profile_form})
 
 
+def privacy_policy(request):
+    return render(request, 'privacy_policy.html')
 
+
+def terms_of_service(request):
+    return render(request, 'terms_of_service.html')
+
+def delete_account(request):
+    return render(request, 'delete_account.html')
 
 
 

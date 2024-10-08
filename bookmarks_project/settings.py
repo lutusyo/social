@@ -35,7 +35,14 @@ ALLOWED_HOSTS = ['www.bongotz.com', 'bongotz.com']
 INSTALLED_APPS = [
 
     # Local
+
     'account.apps.AccountConfig',
+
+    #3-rd party
+
+    'social_django',
+
+    #built-in
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -152,5 +159,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
 ]
+
+SOCIAL_AUTH_FACEBOOK_KEY = '840980608160653' # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '2d79df964f5ec33439c32728368927f9' # Facebook App Secret
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_REDIRECT = 'https://www.bongotz.com/social-auth/complete/facebook/'
 
